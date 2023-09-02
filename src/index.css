@@ -1,0 +1,65 @@
+/* Estilos para el componente Header */
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Estilos para el componente Task */
+.task {
+  background-color: #000;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.task span {
+  cursor: pointer;
+  color: #f00;
+  font-size: 1.5rem;
+}
+
+/* Estilos para el componente TaskList */
+.task-list {
+  margin-top: 2rem;
+}
+
+/* Estilos para el formulario */
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.form input {
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.form button {
+  background-color: #f00;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Estilos generales */
+.container {
+  background-color: #eee;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
