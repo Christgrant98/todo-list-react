@@ -1,14 +1,14 @@
 export function useTodoList(todoList, setTodoList) {
 
-  const saveTodo = (todoName) => {
-    const newTodoList = [...todoList, { todoName }]
+  const saveTodo = (todo) => {
+    const newTodoList = [...todoList, { ...todo }]
     localStorage.setItem("todoList", JSON.stringify(newTodoList))
     setTodoList(newTodoList);
   };
 
-  const updateTodo = (index, todoName) => {
+  const updateTodo = (index, todo) => {
     const newTodoList = [...todoList];
-    newTodoList[index] = {todoName}
+    newTodoList[index] = {...todo}
     localStorage.setItem("todoList", JSON.stringify(newTodoList))
     setTodoList(newTodoList)
   }
@@ -16,7 +16,7 @@ export function useTodoList(todoList, setTodoList) {
   const deleteTodo = (deleteValue) => {
     const restTodoList = [
       ...todoList.filter((val) => {
-        return val.todoName !== deleteValue;
+        return val.name !== deleteValue;
       }),
     ];
     localStorage.setItem("todoList", JSON.stringify(restTodoList))

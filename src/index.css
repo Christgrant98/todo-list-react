@@ -36,7 +36,7 @@
 /* Estilos para el formulario */
 .form {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .form input {
@@ -48,7 +48,7 @@
   width: 100%;
 }
 
-.form button {
+/* .form button {
   background-color: #f00;
   color: #fff;
   padding: 1rem 2rem;
@@ -56,12 +56,12 @@
   border-radius: 0.5rem;
   font-size: 1.5rem;
   cursor: pointer;
-}
+} */
 
 /* Estilos generales */
 .container {
   background-color: #eee;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
