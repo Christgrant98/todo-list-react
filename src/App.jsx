@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./index.css"; // Importa el archivo CSS
+import { useTodoList } from "./hooks";
 
 function Header() {
   return <h1 className="header">Todo List</h1>;
@@ -42,6 +43,7 @@ function TaskList({ todoList, onDelete, updateTodo }) {
 function App() {
   const [todo, setTodo] = useState("");
   const [todoList, setTodoList] = useState([]);
+  const [saveTodo, updateTodo, deleteTodo] = useTodoList(todoList, setTodoList);
 
 
   useEffect(() => {
@@ -51,28 +53,10 @@ function App() {
 
   const handleForm = (e) => {
     e.preventDefault();
-    const newTodoList = [...todoList, { todoName: todo }]
-    localStorage.setItem("todoList", JSON.stringify(newTodoList))
-    setTodoList(newTodoList);
+    saveTodo(todo);
     setTodo("");
   };
 
-  const updateTodo = (index, todoName) => {
-    const newTodoList = [...todoList];
-    newTodoList[index] = {todoName}
-    localStorage.setItem("todoList", JSON.stringify(newTodoList))
-    setTodoList(newTodoList)
-  }
-
-  const deleteTodo = (deleteValue) => {
-    const restTodoList = [
-      ...todoList.filter((val) => {
-        return val.todoName !== deleteValue;
-      }),
-    ];
-    localStorage.setItem("todoList", JSON.stringify(restTodoList))
-    setTodoList(restTodoList);
-  };
 
   return (
     <div className="container">
