@@ -1,5 +1,5 @@
 // 1. import `ChakraProvider` component
-import Tareas from './Tareas';
+import Tareas from './Task';
 import AboutUs from './AboutUs';
 import Home from './Home';
 import Header from './Header';
