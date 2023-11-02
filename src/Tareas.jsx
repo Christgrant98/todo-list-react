@@ -58,7 +58,7 @@ function Tareas() {
             </div>
             <Textarea
               mb={6}
-              placeholder="Descripción"
+              placeholder="Description"
               value={todo.description}
               onChange={(e) => setTodo({ ...todo, description: e.target.value })}
             />

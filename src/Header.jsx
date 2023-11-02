@@ -3,9 +3,9 @@ import { Box, Flex, Spacer, Text, Link as ChakraLink } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const Links = [
-  { name: 'INICIO', url: '/' },
-  { name: 'TAREAS', url: '/tareas' },
-  { name: 'ACERCA DE NOSOTROS', url: '/about' },
+  { name: 'HOME', url: '/' },
+  { name: 'TASKS', url: '/tareas' },
+  { name: 'ABOUT US', url: '/about' },
 ];
 
 const Header = () => {
