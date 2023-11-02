@@ -13,10 +13,10 @@ function Home() {
       textAlign="center"
     >
       <Heading as="h1" size="2xl" mb={4}>
-        Bienvenido a nuestra Plataforma de Tareas
+        Welcome to Our Task Management Platform
       </Heading>
       <Text fontSize="xl" mb={8}>
-        La forma más eficiente de gestionar tus tareas diarias.
+        The most efficient way to manage your daily tasks.
       </Text>
       <Box
         p={8}
@@ -28,10 +28,10 @@ function Home() {
         maxW="sm"
       >
         <Heading as="h2" size="lg" mb={4}>
-          Características destacadas:
+          Key Features:
         </Heading>
         <Text>
-          - Organiza tus tareas de forma fácil y rápida.
+          - Organize your tasks easily and quickly.
         </Text>
       </Box>
     </Flex>

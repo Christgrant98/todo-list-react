@@ -15,23 +15,22 @@ function AboutUs() {
       <Container maxW="container.lg">
         <VStack spacing={8} alignItems="center">
           <Heading as="h1" fontSize="4xl" color="teal.500">
-            Descubre nuestra Aplicación
+            Explore Our Application
           </Heading>
           <Text fontSize="lg">
-            Bienvenido a nuestra plataforma de gestión de tareas, diseñada para
-            simplificar tu vida cotidiana. Aquí encontrarás herramientas
-            intuitivas y poderosas para administrar tus tareas de manera
-            eficiente.
+            Welcome to our task management platform, designed to simplify your
+            everyday life. Here, you'll find intuitive and powerful tools to
+            efficiently manage your tasks.
           </Text>
           <VStack align="start" spacing={4}>
             <Heading as="h2" fontSize="2xl" color="teal.500">
-              Funcionalidades Destacadas
+              Key Features
             </Heading>
             <UnorderedList>
-              <ListItem>Visualizar tus tareas de un vistazo</ListItem>
-              <ListItem>Crear nuevas tareas con facilidad</ListItem>
-              <ListItem>Actualizar y editar detalles de las tareas</ListItem>
-              <ListItem>Eliminar tareas cuando estén completadas</ListItem>
+              <ListItem>Visualize your tasks at a glance</ListItem>
+              <ListItem>Create new tasks with ease</ListItem>
+              <ListItem>Update and edit task details</ListItem>
+              <ListItem>Delete tasks when completed</ListItem>
             </UnorderedList>
           </VStack>
         </VStack>
