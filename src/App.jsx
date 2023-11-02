@@ -1,18 +1,17 @@
 // 1. import `ChakraProvider` component
 import Tareas from './Tareas';
-import SobreNosotros from './SobreNosotros';
+import AboutUs from './AboutUs';
 import Home from './Home';
 import Header from './Header';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  // 2. Wrap ChakraProvider at the root of your app
   return (
     <>
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<SobreNosotros/>}/>
+        <Route path="/about" element={<AboutUs/>}/>
         <Route path="/tareas" element={<Tareas/>}/>
       </Routes>
     </>

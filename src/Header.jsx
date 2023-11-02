@@ -1,10 +1,5 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import React from 'react';
+import { Box, Flex, Spacer, Text, Link as ChakraLink } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const Links = [
@@ -13,78 +8,26 @@ const Links = [
   { name: 'ACERCA DE NOSOTROS', url: '/about' },
 ];
 
-const NavLink = (props) => {
-  const { children } = props;
-
+const Header = () => {
   return (
-    <Flex
-      // px={2}
-      // py={1}
-      w={200}
-      h={'50px'}
-      alignItems="center"
-      justifyContent="center"
-      textColor="white"
-      borderRadius={10}
-      // borderWidth={2}
-      // borderColor={'white'}
-      bgColor={'transparent'}
-      _hover={{
-        textDecoration: 'none',
-        bg: 'gray',
-        textColor: 'black',
-      }}
-    >
-      {children}
-    </Flex>
+    <Box bg="gray.800" py={4} px={8}>
+      <Flex alignItems="center">
+        <Text fontSize="2xl" fontWeight="bold" color="white">
+          TodoListApp
+        </Text>
+        <Spacer />
+        <Flex as="nav" align="center">
+          {Links.map((link, index) => (
+            <Link key={index} to={link.url} style={{ textDecoration: 'none', marginRight: '20px' }}>
+              <ChakraLink fontSize="lg" color="white" _hover={{ textDecoration: 'underline' }}>
+                {link.name}
+              </ChakraLink>
+            </Link>
+          ))}
+        </Flex>
+      </Flex>
+    </Box>
   );
 };
 
-export default function Header() {
-  return (
-    <>
-      {/* <Box
-        bgImage="url('https://clickup.com/blog/wp-content/uploads/2019/01/to-do-list-apps.png')"
-        px={4}
-        position="relative"
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        height={500}
-        brightness="40%"
-      > */}
-        <Box
-          padding={5}
-          backgroundColor={'gray'}
-          // position="absolute"
-          h={'8vh'}
-          // w={'100%'}
-          // marginLeft={15}
-          // top={100}
-        >
-          <Stack
-            // spacing={10}
-            direction={'column'}
-            alignItems={'center'}
-            h={'100%'}
-            justifyContent="center"
-          >
-            
-            <HStack
-              as={'nav'}
-              spacing={1}
-              display={{ base: 'none', md: 'flex' }}
-            >
-              {Links.map((link) => (
-                <Link key={link.name} to={link.url}>
-                  <NavLink >
-                    {link.name}
-                  </NavLink>
-                </Link>  
-              ))}
-            </HStack>
-          </Stack>
-        </Box>
-      {/* </Box> */}
-    </>
-  );
-}
+export default Header;

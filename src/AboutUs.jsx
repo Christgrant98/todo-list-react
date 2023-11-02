@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, List, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
-function SobreNosotros() {
+function AboutUs() {
   return (
     <>
       <Box width={'100vw'} height={'92vh'} background={'linear-gradient(to bottom, #bdc3c7, #2c3e50);'}>
@@ -26,4 +26,4 @@ function SobreNosotros() {
   )
 }
 
-export default SobreNosotros;
+export default AboutUs;
